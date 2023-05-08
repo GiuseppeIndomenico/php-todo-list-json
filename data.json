@@ -1,0 +1,22 @@
+[
+    {
+        "task": "fare la spesa",
+        "done": false
+    },
+    {
+        "task": "rammendare i calzini",
+        "done": false
+    },
+    {
+        "task": "andare in chiesa",
+        "done": false
+    },
+    {
+        "task": "capire l'esercizio",
+        "done": false
+    },
+    {
+        "task": "non uscire di capoccia",
+        "done": false
+    }
+]
