@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'To do list!',
+            message: 'La mia lista di cose da fare!',
             toDoList: [],
             apiUrl: 'server.php',
             toDoItem: {
