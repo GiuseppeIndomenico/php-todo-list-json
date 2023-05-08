@@ -26,9 +26,9 @@ createApp({
                     task: this.toDoItem.task,
                     done: false
                 }
-            }
+            };
             // console.log(data);
-            axios.post(this.apiUrl, data, { headers: { 'Content-Type': 'multipart/from-data' } }).then((res) => {
+            axios.post(this.apiUrl, data, { headers: { 'Content-Type': 'multipart/form-data' } }).then((res) => {
                 console.log(res.data);
                 this.toDoItem.task = '';
                 this.toDoList = res.data;
