@@ -30,9 +30,21 @@
                 <div class="card-body p-0">
                     <div class="row">
                         <div v-for="(todo, index) in toDoList" :key="index" class="border p-2 ms-2 col-12">
-                            <span class="fw-semibold">
-                                {{index + 1}}
-                            </span> : {{todo.task}}
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="fw-semibold">
+                                        {{index + 1}}
+                                    </span> : {{todo.task}}
+                                </div>
+                                <div class="me-3">
+                                    <button class="btn btn-outline-success me-2 rounded-5">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger rounded-5">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
