@@ -16,17 +16,13 @@
 
 <body>
     <div class="bg-primary-subtle vh-100 pt-5" id="app">
-
-
         <div class="container d-flex align-items-center justify-content-center mb-5">
             <div class="card">
                 <div class="card-header text-center">
                     <h3 class=" fw-bold">
                         {{ message }}
                     </h3>
-
                 </div>
-
                 <div class="card-body p-0">
                     <div class="row">
                         <div v-for="(todo, index) in toDoList" :key="index" class="border p-2 ms-2 col-12">
@@ -34,13 +30,17 @@
                                 <div>
                                     <span class="fw-semibold">
                                         {{index + 1}}
-                                    </span> : {{todo.task}}
+                                    </span> :
+                                    <span :class="{'text-decoration-line-through':todo.done}">
+                                        {{todo.task}}
+                                    </span>
                                 </div>
                                 <div class="me-3">
-                                    <button class="btn btn-outline-success me-2 rounded-5">
+                                    <button @click="toggleTaskDone(index)"
+                                        class="btn btn-outline-success me-2 rounded-5">
                                         <i class="fa-solid fa-check"></i>
                                     </button>
-                                    <button class="btn btn-outline-danger rounded-5">
+                                    <button @click="deleteTask(index)" class="btn btn-outline-danger rounded-5">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </button>
                                 </div>
@@ -48,9 +48,7 @@
                         </div>
 
                     </div>
-
                 </div>
-
                 <div class="card-footer">
                     <div class="d-flex align-items-center justify-content-between">
                         <input placeholder="inserisci nuova task qui" v-model="toDoItem.task" @keyup.enter="updateList"
@@ -61,12 +59,6 @@
                 </div>
 
             </div>
-
-
-
-
-
-
         </div>
 
     </div>
